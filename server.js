@@ -15,13 +15,19 @@ app.use(express.json());
 
 
 //  Routes: gives our server a map of how to respond when user visit or request data 
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./routes/api-Routes.js")(app);
+require("./routes/html-Routes.js")(app);
 
 
 
-// Listener: makes server effectively start
+
+
+
+
+
+///////Listening///////
+=======
 
 app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
+  console.log("App listening on PORT " + PORT);
 });
