@@ -1,4 +1,4 @@
-// var db = require("../models");
+var db = require("../models");
 
 module.exports = function (app) {
 
@@ -24,4 +24,6 @@ module.exports = function (app) {
         console.log(req.params.id);
         res.send("/api/delete/${req.params.id} working")
     });
+
+
 };
