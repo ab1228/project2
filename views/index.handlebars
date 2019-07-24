@@ -1,0 +1,65 @@
+<div class="container u-align-center">
+    <h2> Way better than a rental car</h2>
+    <p>Book unforgettable cars from trusted hosts around the world</p>
+
+    <!-- Default dropleft button for where -->
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Where
+        </button>
+        <div class="dropdown-menu">
+            <!-- Dropdown menu links -->
+            <p>
+                <label>make:</label>
+                <select name="config[mode]">
+                    {{#each makeoption }}
+                    <option value="{{value}}" {{#selected}}selected="selected" {{/selected}}>{{name}}</option>
+                    {{year}}
+                    {{make}}
+                    {{model}}
+
+
+                    {{/each}}
+                </select>
+            </p>
+        </div>
+    </div>
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            From
+        </button>
+        <div class="dropdown-menu">
+            <!-- Dropdown menu links --
+        </div>
+    </div>
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Untill
+        </button>
+        <div class="dropdown-menu">
+            <!-- Dropdown menu links -->
+        </div>
+    </div>
+
+
+
+
+    {{!-- {!-- dropdown with car types --}} --}}
+
+
+    {{!-- pick and drop date from --}}
+    {{!-- pick and drop date untill --}}
+    {{!-- search magnifying --}}
+    {{!-- turo --}}
+    {{!-- navbar login(passport) , about us, contact us--}}
+
+
+
+
+</div>
+
+
+{
