@@ -15,16 +15,17 @@ app.use(express.json());
 
 
 //  Routes: gives our server a map of how to respond when user visit or request data 
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./routes/api-Routes.js")(app);
+require("./routes/html-Routes.js")(app);
 
 
 
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
 
-db.sequelize.sync({ force: true }).then(function () {
-  app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-  });
+
+
+
+///////Listening///////
+
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
 });
