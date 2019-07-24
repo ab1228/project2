@@ -10,28 +10,22 @@
         </button>
         <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-            <p>
-                <label>make:</label>
-                <select name="config[mode]">
-                    {{#each makeoption }}
-                    <option value="{{value}}" {{#selected}}selected="selected" {{/selected}}>{{name}}</option>
-                    {{year}}
-                    {{make}}
-                    {{model}}
 
 
-                    {{/each}}
-                </select>
-            </p>
+            <select id="carModel">
+                {{#each makeoption }}
+                <option value={{this.id}}>
+
+                    {{this.make}} - {{this.year}}
+
+                </option>
+                {{/each}}
+            </select>
+
         </div>
     </div>
-    <div class="btn-group dropleft">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            From
-        </button>
-        <div class="dropdown-menu">
-            <!-- Dropdown menu links --
+
+    <!-- Dropdown menu links --
         </div>
     </div>
     <div class="btn-group dropleft">
@@ -41,20 +35,20 @@
         </button>
         <div class="dropdown-menu">
             <!-- Dropdown menu links -->
-        </div>
-    </div>
+</div>
+</div>
 
 
 
 
-    {{!-- {!-- dropdown with car types --}} --}}
+{{!-- {!-- dropdown with car types --}} --}}
 
 
-    {{!-- pick and drop date from --}}
-    {{!-- pick and drop date untill --}}
-    {{!-- search magnifying --}}
-    {{!-- turo --}}
-    {{!-- navbar login(passport) , about us, contact us--}}
+{{!-- pick and drop date from --}}
+{{!-- pick and drop date untill --}}
+{{!-- search magnifying --}}
+{{!-- turo --}}
+{{!-- navbar login(passport) , about us, contact us--}}
 
 
 
