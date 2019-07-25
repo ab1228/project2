@@ -1,5 +1,4 @@
-var db = require("../models");
-////will come from sequelize models
+// var db = require("../models");////will come from sequelize models
 
 var path = require("path");
 
@@ -27,12 +26,4 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, ""));
     });
 
-    // Deepali
-    app.get("/cars", function (req, res) {
-        console.log(req.method);
-        db.Cars.findAll({}).then(function (data) {
-            res.render("index", { makeoption: data })
-        })
-
-    });
 };

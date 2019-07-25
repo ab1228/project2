@@ -18,16 +18,17 @@ app.use(express.json());
 require("./routes/api-Routes.js")(app);
 require("./routes/html-Routes.js")(app);
 
+// requiring models for syncing
+var db = require("./models");
 
 
-
-
-
-
+// Syncing sequelize models
+db.sequelize.sync({ foce: true }).then(function () {
 
 ///////Listening///////
 
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
+});
 });
