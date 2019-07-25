@@ -9,7 +9,7 @@ conn = mysql.createConnection({
     user: 'root',
     // grab password from .env
     password: process.env.password,
-    database: 'burgers_db'
+    database: 'cars_db'
 });
 
 // connect to database
