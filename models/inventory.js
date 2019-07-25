@@ -9,17 +9,13 @@ module.exports = function (sequelize, DataTypes) {
 
 
     Inventory.associate = function (models) {
-        Inventory.belongsTo(models.User, {
-            foreignkey: {
-                allowNull: false
-            }
-        });
-        Inventory.hasMany(models.Car, {
-            foreignkey: {
+        Inventory.belongsTo(models.Car, {
+            foreignKey: {
                 allowNull: false
             }
         })
     };
+    
     return Inventory;
 }
 

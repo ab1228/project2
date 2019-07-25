@@ -17,12 +17,5 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    User.associate = function(models) {
-        User.hasMany(models.Inventory, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    }
     return User;
 }

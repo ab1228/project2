@@ -9,10 +9,8 @@ module.exports = function(sequelize, DataTypes){
     });
 
     Car.associate = function(models) {
-        Car.belongsTo(models.Inventory,{
-            foreignKey: {
-                allowNull: false
-            }
+        Car.hasMany(models.Inventory,{
+            onDelete: "cascade"
         });
     };
     
