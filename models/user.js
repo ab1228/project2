@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var user = sequelize.define("User", {
+    var User = sequelize.define("User", {
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -11,6 +11,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         }
-    })
-    return user;
+    });
+
+    User.associate = function(models) {
+        User.hasMany(models.Inventory, {
+            foreignKey: {
+                allowNull: false
+            }
+        })
+    }
+    return User;
 }
