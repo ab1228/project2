@@ -1,9 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
     var user = sequelize.define("User", {
-        name: DataTypes.STRING,
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         checkout: DataTypes.DATE,
         checkin: DataTypes.DATE,
-        inventory_id: DataTypes.INTEGER
+        inventory_id: DataTypes.INTEGER,
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     })
     return user;
 }
