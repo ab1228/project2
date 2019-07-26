@@ -1,8 +1,15 @@
 module.exports = function (sequelize, DataTypes) {
     var Inventory = sequelize.define("Inventory", {
-        milesDriven: DataTypes.INTEGER,
+        make:  {
+            type: DataTypes.STRING,
+            allowNull: false 
+        },
+        model: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         available: DataTypes.BOOLEAN,
-        car_id: DataTypes.INTEGER
+        // car_id: DataTypes.INTEGER
     }, {
             freezeTableName: true
         });
