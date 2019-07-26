@@ -11,9 +11,10 @@ var exphbs = require("express-handlebars");
 var app = express();
 
 // set initial PORT
-// database requiring models for syncing
-var PORT = process.env.PORT || 7000;
-var db = require("./models");
+
+var PORT = process.env.PORT || 7050;
+
+
 
 // middleware
 //  set up the Express app to handle the parsing/ set up middleware
@@ -43,8 +44,27 @@ app.get("/", function (req, res) {
 });
 
 //  Routes: gives our server a map of how to respond when user visit or request data 
-require("./routes/api-Routes.js")(app);
-require("./routes/html-Routes.js")(app);
+
+
+
+
+
+// requiring models for syncing
+// var db = require("./models");
+
+
+// Syncing sequelize models
+// db.sequelize.sync({ foce: true }).then(function () {
+
+    ///////Listening///////
+
+
+//     app.listen(PORT, function () {
+//         console.log("App listening on PORT " + PORT);
+//     });
+// });
+require("./routes/api-inventoryRoutes.js")(app);
+require("./routes/api-userRoutes.js")(app);
 // added for passport
 require("./routes/api_passport-Routes.js")(app);
 require("./routes/html_passport-Routes.js")(app);
@@ -55,3 +75,4 @@ db.sequelize.sync().then(function () {
         console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
     });
 });
+
