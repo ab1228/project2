@@ -1,0 +1,63 @@
+/* pic for background  create logo  */
+.p4 {background-image: url("../image/cars.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-size: 150%;
+    font-style: cursive;
+    color:white;
+  
+   
+    
+    font-family: 'Cedarville Cursive', cursive;
+    font-size:400%;
+  top: 40%;
+  
+
+  left:80S%;
+  min-height: 500px;
+}
+#myid a {font-size: 100%;
+    color:black;
+    padding: 10px;
+
+
+}
+#myse{
+    position: absolute;
+    left:50%;
+    font-size:}
+
+
+#aboutus{position: absolute;
+    text-align:center;
+   font-size: 180%;
+  left:10%;
+ font-style: cursive;
+ border-block:black;
+
+}
+
+.middle{
+    margin: 10%;
+    position: relative;
+    font-size: 300%;
+    
+  
+  left:10%;
+ font-style: cursive;
+
+}
+#contactus{
+
+text-align:center;
+position: relative;
+left: 230%;
+
+    
+
+  
+}
+ 
