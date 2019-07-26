@@ -21,6 +21,10 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     });
-
+    User.associate = function (models) {
+        User.belongsTo(models.inventory),{
+            foreignKey: inventory_id
+        }
+}
     return User;
 }
