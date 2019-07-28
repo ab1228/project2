@@ -1,6 +1,3 @@
-SELECT *
-FROM cars_db.cars;
-
 INSERT INTO inventory
     (make, model, available, createdAt, updatedAt)
 VALUES
