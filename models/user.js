@@ -16,15 +16,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
     });
     User.associate = function (models) {
-        User.belongsTo(models.inventory),{
-            foreignKey: inventory_id
-        }
+        User.belongsTo(models.Inventory,{
+            
+            foreignKey: "inventory_id",
+            targetKey: "id"                
+            
+        })
 }
     return User;
 }
