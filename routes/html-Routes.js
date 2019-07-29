@@ -14,9 +14,7 @@ module.exports = function (app) {
 // index/landing page
     app.get("/hotcars", function (req, res) {
         db.Inventory.findAll({}).then(function(results){
-            res.render("index", {
-                cars: results
-            })
+            res.render("index")
         });
     });
 
@@ -30,6 +28,8 @@ module.exports = function (app) {
         });
     });
 
+    // route for list of users
+
     app.get("/userlist", function (req,res) {
         db.User.findAll({}).then(function(results){
             res.render("userList", {
@@ -38,6 +38,15 @@ module.exports = function (app) {
         });
     });
 
+    // route for cars checked out
+
+    app.get("/return", function (req, res) {
+        db.Inventory.findAll({}).then(function (results) {
+            res.render("check-in", {
+                cars: results
+            })
+        });
+    });
     // route to make a new user ---- barebones, needs to be made prettier
 
     app.get("/createuser", function (req,res) {
