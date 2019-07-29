@@ -1,0 +1,9 @@
+{{#each cars}}
+    {{#unless available}}
+        {{this.make}} {{this.model}}
+            <form class="returnCar">
+                <input type="hidden" class="inventory_id" type="text" value={{this.id}}>
+                <button type="submit">Check car in</button>
+            </form>
+    {{/unless}}
+{{/each}}
