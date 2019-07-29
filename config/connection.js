@@ -4,12 +4,12 @@ var mysql = require('mysql');
 var conn;
 
 conn = mysql.createConnection({
-    host: 'localhost',
+    host: DB_HOST,
     port: 3306,
-    user: 'root',
+    user: DB_USER,
     // grab password from .env
-    password: process.env.password,
-    database: 'cars_db'
+    password: DB_PASS,
+    database: DB_DB
 });
 
 // connect to database
