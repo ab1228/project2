@@ -1,0 +1,36 @@
+Create a new User:
+
+{{!-- Form for new user --}}
+
+<form method="POST" action="/api/users">
+
+    {{!-- new user name --}}
+
+    <div class="form-group">
+        <label for="name">
+            Name
+        </label>
+        <input class="form-control" type="text" placeholder="First and Last Name" name="name">
+    </div>
+
+    {{!-- new user Email --}}
+
+    <div class="form-group">
+        <label for="email">
+            Email
+        </label>
+        <input class="form-control" type="email" placeholder="example@gmail.com" name="email">
+    </div>
+
+    {{!-- new user Password --}}
+    <div class="form-group">
+        <label for="password">
+            Password
+        </label>
+        <input type="password" class="form-control" name="password">
+    </div>
+
+    {{!-- submit form --}}
+    <button type="submit">Submit</button>
+</form>
+
