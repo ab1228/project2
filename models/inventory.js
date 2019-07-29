@@ -15,13 +15,7 @@ module.exports = function (sequelize, DataTypes) {
         });
 
 
-    // Inventory.associate = function (models) {
-    //     Inventory.belongsTo(models.Car, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     })
-    // };
+   
     
     return Inventory;
 }

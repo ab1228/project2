@@ -5,7 +5,7 @@ module.exports = function (app) {
 
     app.get("/api/users", function (req, res) {
         // 1. Add a join to include all of each user
-        db.User.findAll({}).then(function (dbUser) {
+        db.User.findAll({include: [db.Inventory]}).then(function (dbUser) {
             res.json(dbUser);
         });
     });

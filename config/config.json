@@ -1,11 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "B@y3kW@5Th3F1r5t.Ez10W@5Th3B35t",
     "database": "cars_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

@@ -1,0 +1,14 @@
+{{#each users}}
+<div>
+    User name: {{this.name}}
+    User email: {{this.email}}
+    <form class="deleteUser">
+        <input type="hidden" class="user_id" type="text" value={{this.id}}>
+        <button type="submit">Delete User</button>
+    </form>
+</div>
+{{/each}}
+
+
+
+{{!-- /api/users/:id --}}

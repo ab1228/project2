@@ -4,12 +4,12 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-    app.get("/", function (req, res) {
-        // 1. Add a join to include all of each user
-        db.Inventory.findAll({}).then(function (dbInventory) {
-            res.json(dbInventory);
-        });
-    });
+    // app.get("/", function (req, res) {
+    //     // 1. Add a join to include all of each user
+    //     db.Inventory.findAll({}).then(function (dbInventory) {
+    //         res.json(dbInventory);
+    //     });
+    // });
 
     app.get("/api/inventory/:id", function (req, res) {
         // 2; Add a join to include all of the users rentals
@@ -40,5 +40,16 @@ module.exports = function (app) {
 
     });
 
+    app.put("/api/inventory/:id", function(req,res) {
+        db.Inventory.update(
+            {available: true},
+            {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function(dbInventory){
+                res.json(dbInventory)
+            })
+    });
 
 };
