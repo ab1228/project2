@@ -40,5 +40,16 @@ module.exports = function (app) {
 
     });
 
+    app.put("/api/inventory/:id", function(req,res) {
+        db.Inventory.update(
+            {available: true},
+            {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function(dbInventory){
+                res.json(dbInventory)
+            })
+    });
 
 };
