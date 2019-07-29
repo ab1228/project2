@@ -1,7 +1,9 @@
 $(".drop-downtoggle").dropdown();
-$("#carDropDown").on("click", function(){
-    $("#carMake").html($(this).find("a").html());
+$("#carDropDown li").on("click", function(){
+    $("#dropdown_title").html($(this).find("a").html());
 });
+
+// $(".drop-downtoggle").dropdown('update')
 
 var submit = document.getElementById("submit");
 submit.addEventListener("click", function (event) {
