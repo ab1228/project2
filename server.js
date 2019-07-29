@@ -67,9 +67,11 @@ require("./routes/api-inventoryRoutes.js")(app);
 require("./routes/api-userRoutes.js")(app);
 require("./routes/html-Routes.js")(app);
 // added for passport
-require("./routes/api_passport-Routes.js")(app);
-require("./routes/html_passport-Routes.js")(app);
 
+require("./routes/html_passport-Routes.js")(app);
+require("./routes/api_passport-Routes.js")(app, passport);
+
+require("./config/passport.js")(passport, db.User);
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {

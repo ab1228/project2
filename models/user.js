@@ -8,7 +8,9 @@ module.exports = function (sequelize, DataTypes) {
         },
         email: {
             type: DataTypes.STRING,
-            allowNull: false
+            validate: {
+                isEmail: true
+            }
         },
         checkout: DataTypes.DATE,
         checkin: DataTypes.DATE,
@@ -16,15 +18,20 @@ module.exports = function (sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING,
             allowNull: false
-        },
+        }
+        // status: {
+        //     type: Sequelize.ENUM("active", "inactive"),
+        //     defaultValue: "active"
+        // }
+
     });
     User.associate = function (models) {
-        User.belongsTo(models.Inventory,{
-            
+        User.belongsTo(models.Inventory, {
+
             foreignKey: "inventory_id",
-            targetKey: "id"                
-            
+            targetKey: "id"
+
         })
-}
+    }
     return User;
 }
