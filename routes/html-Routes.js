@@ -30,6 +30,14 @@ module.exports = function (app) {
         });
     });
 
+    app.get("/userlist", function (req,res) {
+        db.User.findAll({}).then(function(results){
+            res.render("userList", {
+                users: results
+            })
+        });
+    });
+
     // route to make a new user ---- barebones, needs to be made prettier
 
     app.get("/createuser", function (req,res) {
