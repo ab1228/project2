@@ -40,7 +40,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars")
 
 // app.get("/", function (req, res) {
-//     res.send("Welcome to Passport with Sequlize");
+//     res.send("Welcome to Passport with Sequelize");
 // });
 
 //  Routes: gives our server a map of how to respond when user visit or request data 
