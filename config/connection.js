@@ -10,7 +10,7 @@ var config = {
     // grab password from .env
     password: DB_PASS,
     database: DB_DB
-}
+};
 var connection;
 
 var host;
