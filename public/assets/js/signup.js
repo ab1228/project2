@@ -17,13 +17,15 @@ $(document).ready(function () {
         console.log(userData);
 
         if (!userData.email || !userData.password || !userData.name) {
-            // alert("complete form")
+            alert("complete form")
             return;
         }
         // If we have an email and password, run the signUpUser function
         signUpUser(userData);
         emailInput.val("");
         passwordInput.val("");
+
+
     });
 
     // Does a post to the signup route. If successful, we are redirected to the members page
@@ -32,10 +34,10 @@ $(document).ready(function () {
         $.post("/api/signup", userData, function (data) {
 
         })
-        // .then(function (data) {
-        //     window.location.replace("/members");
-        //     // If there's an error, handle it by throwing up a bootstrap alert
-        // })
+            .then(function (data) {
+                window.location.replace("/carchoice");
+                // If there's an error, handle it by throwing up a bootstrap alert
+            })
 
     }
 

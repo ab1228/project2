@@ -9,22 +9,22 @@ module.exports = function (app) {
     app.get("/", function (req, res) {
         // If the user already has an account send them to the members page
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/sign-up");
         }
-        res.sendFile(path.join(__dirname, "../public/signup.html"));
+        res.render("sign-up");
     });
 
     app.get("/login", function (req, res) {
         // If the user already has an account send them to the members page
-        if (req.user) {
-            res.redirect("/members");
-        }
+        // if (req.user) {
+        //     res.redirect("/dashboard");
+        // }
         res.render("login");
     });
     app.get("/sign-up", function (req, res) {
         // If the user already has an account send them to the members page
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/dashboard");
         }
         res.render("sign-up");
     });

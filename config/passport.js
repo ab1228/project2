@@ -42,7 +42,7 @@ module.exports = function (passport, user) {
                 }).then(function (user) {
                     if (user) {
                         return done(null, false, {
-                            message: "That email is already taken"
+                            message: "That email is already taken please login using login tab"
                         });
                     } else {
                         var userPassword = generateHash(password);

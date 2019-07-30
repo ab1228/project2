@@ -6,12 +6,13 @@ $(document).ready(function () {
 
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on("click", function (event) {
-        alert("clicked")
         event.preventDefault();
+
         var userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
         };
+        console.log(userData)
 
         if (!userData.email || !userData.password) {
             return;
@@ -28,6 +29,8 @@ $(document).ready(function () {
         $.post("/api/login", {
             email: email,
             password: password
+        }).then(function (data) {
+            window.location.replace('/dashboard')
         })
 
     }

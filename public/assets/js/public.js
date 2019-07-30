@@ -2,9 +2,7 @@ $(".drop-downtoggle").dropdown();
 $("#carDropDown li").on("click", function () {
     $("#dropdown_title").html($(this).find("a").html());
 });
-
 // $(".drop-downtoggle").dropdown('update')
-
 var submit = document.getElementById("submit");
 submit.addEventListener("click", function (event) {
     event.preventDefault();
@@ -12,8 +10,6 @@ submit.addEventListener("click", function (event) {
     var date = document.getElementById("end-date").value;
     var user_id = $(this).children(".user_id").val();
     console.log(date);
-
-
     $.ajax({
         method: "UPDATE",
         url: "/api/users/" + user_id
@@ -22,6 +18,6 @@ submit.addEventListener("click", function (event) {
             location.reload();
         })
 });
-
-
 //////need to work on this button update/////
+
+////need to work on this button update/////
