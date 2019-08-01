@@ -2,7 +2,7 @@
 
 ## Live
 
-Hot Cars is deployed on heroku at: 
+Hot Cars is deployed on heroku at: https://rentalcartx.herokuapp.com/
 
 ## Purpose
 
